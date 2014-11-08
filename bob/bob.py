@@ -125,6 +125,9 @@ if __name__ == '__main__':
         import timeit
 
         t_b = timeit.Timer(stmt=profile_statement, setup=setup)
-        r_b = repeat
-        n_b = number
+        r_b = int(repeat)
+        n_b = int(number)
         timing_info = t_b.repeat(repeat=r_b, number=n_b)
+        timing_result = [x_b / n_b for x_b in timing_info]
+
+        print('Average Execution Time: {0}'.format(min(timing_result)))

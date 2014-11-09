@@ -6,9 +6,20 @@
 
 """
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 script_name = 'Leap Year'
 title = '{}: version {}'.format(script_name, __version__)
+
+
+def even_div(dividend, divider):
+    """
+    Function will determine if the quotient of the dividend and the divider
+    is even or not.
+
+    :return: True if division of the dividend by the divider has no remainder
+    :rtype: bool
+    """
+    return not bool(dividend % divider)
 
 
 def is_leap_year(year):
@@ -19,22 +30,12 @@ def is_leap_year(year):
     :return: True if leap year and False if not
     :rtype: bool
     """
-    divisible = []
-    for denominator in [4, 100, 400]:
-        divisible.append(not bool(year % denominator))
-
-    if all(divisible):
-        leap_year = True
-    elif divisible[0] and not divisible[1]:
-        leap_year = True
-    else:
-        leap_year = False
-
-    return leap_year
+    return(even_div(year, 4) and
+           not even_div(year, 100) or even_div(year, 400))
 
 
 if __name__ == '__main__':
-    is_leap_year(1900)
+    is_leap_year(2000)
 
     profile_statement = 'is_leap_year(1900)'
     timing = False

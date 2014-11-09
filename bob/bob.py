@@ -6,7 +6,7 @@
 
 """
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 script_name = 'Exercism Bob Problem'
 title = '{}: version {}'.format(script_name, __version__)
 
@@ -62,7 +62,7 @@ class Bob():
 
         if stmt == '':
             response = self.silent()
-        elif all([stmt.upper() == stmt,
+        elif all([stmt.isupper(),
                   not stmt.rstrip('?').isnumeric(),
                   not stmt.replace(', ', '').isdigit()]):
             response = self.yell()

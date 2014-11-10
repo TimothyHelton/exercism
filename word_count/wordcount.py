@@ -16,20 +16,27 @@ def word_count(phrase):
     Display the words in a phrase and number of times each word is used.
 
     :param str phrase: string of words
-    :return: list of words and the number of times they occur in phrase
-    :rtype: list
+    :return: dictionary of words and the number of times they occur in phrase
+    :rtype: dict
     """
     words = phrase.split()
+    count = {x: 0 for x in set(words)}
+
+    for word in words:
+        count[word] += 1
+
+    return count
 
 
 if __name__ == '__main__':
-    word_count('word')
+    print(word_count('word test word'))
+
     profile_statement = ''
     timing = False
     benchmarking, repeat, number = False, 3, 1E6
     setup = None
     # setup = '\n'.join(('from __main__ import <EnterFuncVarOrClassHere>',
-    # 'from __main__ import <EnterFuncVarOrClassHere>'))
+    #                      'from __main__ import <EnterFuncVarOrClassHere>'))
 
     if timing:
         import cProfile

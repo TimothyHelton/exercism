@@ -11,7 +11,7 @@ bob
 .. automodule:: bob.bob
     :members:
     :show-inheritance:
-    :synopsis:
+    :synopsis: Return teenager Bob's responses to inquires.
 
 
 leap
@@ -20,7 +20,16 @@ leap
 .. automodule:: leap.year
     :members:
     :show-inheritance:
-    :synopsis:
+    :synopsis: Determine if a given year is a leap year.
+
+
+rna_transcription
+-----------------
+
+.. automodule:: rna_transcription.dna
+    :members:
+    :show-inheritance:
+    :synopsis: Convert DNA sequences to RNA sequences.
 
 
 wordcount
@@ -29,4 +38,4 @@ wordcount
 .. automodule:: word_count.wordcount
     :members:
     :show-inheritance:
-    :synopsis:
+    :synopsis: Count the number of times words are used in a phrase.

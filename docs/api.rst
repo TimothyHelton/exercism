@@ -14,6 +14,15 @@ bob
     :synopsis: Return teenager Bob's responses to inquires.
 
 
+hamming
+-------
+
+.. automodule:: hamming.hamming
+    :members:
+    :show-inheritance:
+    :synopsis: Determine the hamming distance between to strands of DNA.
+
+
 leap
 ----
 

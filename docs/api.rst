@@ -14,6 +14,15 @@ bob
     :synopsis: Return teenager Bob's responses to inquires.
 
 
+gigasecond
+----------
+
+.. automodule:: gigasecond.gigasecond
+    :members:
+    :show-inheritance:
+    :synopsis: Determine the date 1E9 seconds in the future from given date.
+
+
 hamming
 -------
 

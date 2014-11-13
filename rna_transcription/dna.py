@@ -6,7 +6,7 @@
 
 """
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 script_name = 'DNA'
 title = '{}: version {}'.format(script_name, __version__)
 
@@ -19,13 +19,10 @@ def to_rna(strand):
     :return: string of RNA nucleotides
     :rtype: str
     """
-    dna = ['A', 'C', 'G', 'T']
-    rna = ['U', 'G', 'C', 'A']
+    dna = 'ACGT'
+    rna = 'UGCA'
 
-    convert = dict(zip(dna, rna))
-    transcribe = [convert[x] for x in strand.upper()]
-
-    return ''.join(transcribe)
+    return strand.translate(str.maketrans(dna, rna))
 
 
 if __name__ == '__main__':

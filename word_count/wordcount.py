@@ -6,30 +6,42 @@
 
 """
 
+import string
+from collections import Counter
+
 __version__ = '0.0.1'
 script_name = 'Word Count'
 title = '{}: version {}'.format(script_name, __version__)
 
 
-def word_count(phrase):
+class Phrase():
     """
-    Display the words in a phrase and number of times each word is used.
+    Class will collect attributes related to phrases.
 
-    :param str phrase: string of words
-    :return: dictionary of words and the number of times they occur in phrase
-    :rtype: dict
+    :attributes:
+
+        * **phrase**: string of words
     """
-    words = phrase.split()
-    count = {x: 0 for x in set(words)}
+    def __init__(self, phrase):
+        self.phrase = phrase
 
-    for word in words:
-        count[word] += 1
+    def word_count(self):
+        """
+        Display the words in a phrase and number of times each word is used.
 
-    return count
+        :return: dictionary of words and the number of times they occur in \
+            phrase
+        :rtype: dict
+        """
+        filter_phrase = self.phrase.translate([string.punctuation,
+                                               string.whitespace])
+
+        return Counter(filter_phrase.split())
 
 
 if __name__ == '__main__':
-    print(word_count('word test word'))
+    print(Phrase('rah rah ah ah ah\nroma roma ma\nga ga oh la la\nwant your '
+                 'bad romance').word_count())
 
     profile_statement = ''
     timing = False

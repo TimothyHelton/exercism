@@ -21,7 +21,7 @@ def distance(strand_1, strand_2):
     :return: hamming distance
     :rtype: int
     """
-    return sum([1 for x in zip(strand_1, strand_2) if len(set(x)) == 2])
+    return sum(a != b for (a, b) in zip(strand_1, strand_2))
 
 if __name__ == '__main__':
     print(distance('A', 'A'))

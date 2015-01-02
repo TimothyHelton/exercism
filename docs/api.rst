@@ -40,6 +40,14 @@ leap
     :show-inheritance:
     :synopsis: Determine if a given year is a leap year.
 
+meetup
+------
+
+.. automodule:: meetup.meetup
+    :members:
+    :show-inheritance:
+    :synopsis: Determine dates for meetups.
+
 
 rna_transcription
 -----------------

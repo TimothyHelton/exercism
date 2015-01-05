@@ -70,6 +70,3 @@ if __name__ == '__main__':
         n_b = int(number)
         timing_info = t_b.repeat(repeat=r_b, number=n_b)
         timing_result = [x_b / n_b for x_b in timing_info]
-
-        notify.center_output(
-            'Average Execution Time: {0}'.format(min(timing_result)))

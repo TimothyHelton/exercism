@@ -14,6 +14,16 @@ bob
     :synopsis: Return teenager Bob's responses to inquires.
 
 
+difference_of_squares
+---------------------
+
+.. automodule:: difference_of_squares.difference_of_squares
+    :members:
+    :show-inheritance:
+    :synopsis: Determine the difference between sum of the squares and the
+        square of the sums.
+
+
 gigasecond
 ----------
 

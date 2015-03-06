@@ -5,6 +5,16 @@ API - Application Program Interface
     :maxdepth: 2
 
 
+anagram
+-------
+
+.. automodule:: anagram.anagram
+    :members:
+    :show-inheritance:
+    :synopsis: Write a program that, given a word and a list of possible
+        anagrams, selects the correct sublist.
+
+
 bob
 ---
 

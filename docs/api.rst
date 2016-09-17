@@ -52,6 +52,14 @@ hamming
     :synopsis: Determine the hamming distance between to strands of DNA.
 
 
+hello_world
+-----------
+
+.. automodule:: hello_world.hello_world
+    :members:
+    :show-inheritance:
+    :synopsis: Greet user or announce "Hello World".
+
 leap
 ----
 
